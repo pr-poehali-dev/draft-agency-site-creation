@@ -302,9 +302,9 @@ const Index = () => {
       <section id="subscribe" className="py-20 px-4">
         <div className="container mx-auto max-w-3xl">
           <div className="text-center mb-12">
-            <h3 className="text-4xl font-black mb-4">ПОДПИСКА</h3>
+            <h3 className="text-4xl font-black mb-4">БЕСПЛАТНАЯ ПОДПИСКА</h3>
             <p className="text-xl text-muted-foreground">
-              Получайте эксклюзивные материалы и новости от нашего агентства
+              Получайте эксклюзивные материалы абсолютно бесплатно
             </p>
           </div>
           
@@ -313,9 +313,12 @@ const Index = () => {
               <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center mx-auto mb-4">
                 <Icon name="Mail" size={40} className="text-white" />
               </div>
-              <CardTitle className="text-3xl">Подпишитесь на рассылку</CardTitle>
+              <CardTitle className="text-3xl flex items-center justify-center gap-3">
+                Бесплатная рассылка
+                <span className="bg-green-500 text-white text-sm px-3 py-1 rounded-full">FREE</span>
+              </CardTitle>
               <CardDescription className="text-base mt-2">
-                Будьте в курсе новых трендов дизайна и получайте специальные предложения
+                100% бесплатно. Никаких скрытых платежей. Отписаться можно в любой момент
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
