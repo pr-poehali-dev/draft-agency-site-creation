@@ -80,7 +80,7 @@ const Index = () => {
               <h1 className="text-2xl font-black tracking-tight">DIGITAL ART AGENCY</h1>
             </div>
             <div className="hidden md:flex gap-6">
-              {['home', 'about', 'team', 'earnings', 'blog', 'contact'].map((section) => (
+              {['home', 'about', 'team', 'blog', 'contact'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
@@ -91,7 +91,6 @@ const Index = () => {
                   {section === 'home' && 'Главная'}
                   {section === 'about' && 'О нас'}
                   {section === 'team' && 'Команда'}
-                  {section === 'earnings' && 'Заработок'}
                   {section === 'blog' && 'Блог'}
                   {section === 'contact' && 'Контакты'}
                 </button>
@@ -213,78 +212,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="earnings" className="py-20 px-4 bg-muted/30">
-        <div className="container mx-auto">
-          <h3 className="text-4xl font-black mb-12 text-center">ЗАРАБОТОК</h3>
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <Card className="border-2 border-primary/50 hover:border-primary transition-all hover:scale-105 duration-300">
-              <CardHeader>
-                <div className="w-16 h-16 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
-                  <Icon name="Sparkles" size={32} className="text-primary" />
-                </div>
-                <CardTitle className="text-2xl">Создание дизайна</CardTitle>
-                <CardDescription className="text-base mt-2">
-                  Разработка логотипов, баннеров, иллюстраций для брендов
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="text-3xl font-black text-primary mb-2">от 5,000₽</div>
-                <p className="text-sm text-muted-foreground">за проект</p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 border-accent/50 hover:border-accent transition-all hover:scale-105 duration-300">
-              <CardHeader>
-                <div className="w-16 h-16 bg-accent/20 rounded-lg flex items-center justify-center mb-4">
-                  <Icon name="ImagePlus" size={32} className="text-accent" />
-                </div>
-                <CardTitle className="text-2xl">Ретушь фотографий</CardTitle>
-                <CardDescription className="text-base mt-2">
-                  Профессиональная обработка и коррекция изображений
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="text-3xl font-black text-accent mb-2">от 1,500₽</div>
-                <p className="text-sm text-muted-foreground">за фото</p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 border-secondary/50 hover:border-secondary transition-all hover:scale-105 duration-300">
-              <CardHeader>
-                <div className="w-16 h-16 bg-secondary/20 rounded-lg flex items-center justify-center mb-4">
-                  <Icon name="Grid3x3" size={32} className="text-secondary" />
-                </div>
-                <CardTitle className="text-2xl">Пиксель-арт</CardTitle>
-                <CardDescription className="text-base mt-2">
-                  Создание персонажей и ассетов для игр
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="text-3xl font-black text-secondary mb-2">от 3,000₽</div>
-                <p className="text-sm text-muted-foreground">за ассет</p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 border-primary/50 hover:border-primary transition-all hover:scale-105 duration-300">
-              <CardHeader>
-                <div className="w-16 h-16 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
-                  <Icon name="Rocket" size={32} className="text-primary" />
-                </div>
-                <CardTitle className="text-2xl">Полное сопровождение</CardTitle>
-                <CardDescription className="text-base mt-2">
-                  Комплексная разработка визуала для бизнеса
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="text-3xl font-black text-primary mb-2">от 50,000₽</div>
-                <p className="text-sm text-muted-foreground">в месяц</p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      <section id="blog" className="py-20 px-4">
+      <section id="blog" className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto">
           <h3 className="text-4xl font-black mb-12 text-center">БЛОГ</h3>
           <div className="grid md:grid-cols-3 gap-8">
