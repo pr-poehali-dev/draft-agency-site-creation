@@ -112,3 +112,48 @@
     font-weight: 700;
   }
 }
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 10px rgba(255, 165, 0, 0.8));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(255, 165, 0, 1));
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+.glow-animation {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.shake-animation {
+  animation: shake 0.5s ease-in-out infinite;
+}

@@ -5,6 +5,21 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import Icon from '@/components/ui/icon';
 
+const HalloweenDecor = () => {
+  return (
+    <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
+      <div className="absolute top-10 left-10 text-6xl float-animation opacity-80">🎃</div>
+      <div className="absolute top-20 right-20 text-5xl float-animation opacity-70" style={{ animationDelay: '0.5s' }}>👻</div>
+      <div className="absolute top-40 left-1/4 text-4xl float-animation opacity-60" style={{ animationDelay: '1s' }}>🎃</div>
+      <div className="absolute bottom-20 right-1/4 text-6xl glow-animation">🎃</div>
+      <div className="absolute bottom-40 left-20 text-5xl float-animation opacity-75" style={{ animationDelay: '1.5s' }}>👻</div>
+      <div className="absolute top-1/2 right-10 text-4xl float-animation opacity-65" style={{ animationDelay: '2s' }}>🎃</div>
+      <div className="absolute top-1/3 left-1/3 text-3xl float-animation opacity-50" style={{ animationDelay: '0.8s' }}>👻</div>
+      <div className="absolute bottom-1/3 right-1/3 text-5xl glow-animation opacity-80" style={{ animationDelay: '1.2s' }}>🎃</div>
+    </div>
+  );
+};
+
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
 
@@ -51,8 +66,9 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-border">
+    <div className="min-h-screen bg-background relative">
+      <HalloweenDecor />
+      <nav className="fixed top-0 w-full bg-card/95 backdrop-blur-sm z-50 border-b border-border">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
