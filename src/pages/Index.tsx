@@ -75,7 +75,7 @@ const Index = () => {
               <h1 className="text-2xl font-black tracking-tight">DIGITAL ART AGENCY</h1>
             </div>
             <div className="hidden md:flex gap-6">
-              {['home', 'about', 'team', 'earnings', 'blog', 'contact'].map((section) => (
+              {['home', 'about', 'team', 'earnings', 'subscribe', 'blog', 'contact'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
@@ -87,6 +87,7 @@ const Index = () => {
                   {section === 'about' && 'О нас'}
                   {section === 'team' && 'Команда'}
                   {section === 'earnings' && 'Заработок'}
+                  {section === 'subscribe' && 'Подписка'}
                   {section === 'blog' && 'Блог'}
                   {section === 'contact' && 'Контакты'}
                 </button>
@@ -298,7 +299,87 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="blog" className="py-20 px-4">
+      <section id="subscribe" className="py-20 px-4">
+        <div className="container mx-auto max-w-3xl">
+          <div className="text-center mb-12">
+            <h3 className="text-4xl font-black mb-4">ПОДПИСКА</h3>
+            <p className="text-xl text-muted-foreground">
+              Получайте эксклюзивные материалы и новости от нашего агентства
+            </p>
+          </div>
+          
+          <Card className="border-2 border-primary/30 shadow-xl">
+            <CardHeader className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                <Icon name="Mail" size={40} className="text-white" />
+              </div>
+              <CardTitle className="text-3xl">Подпишитесь на рассылку</CardTitle>
+              <CardDescription className="text-base mt-2">
+                Будьте в курсе новых трендов дизайна и получайте специальные предложения
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <form className="space-y-4">
+                <div className="space-y-2">
+                  <label className="text-sm font-medium flex items-center gap-2">
+                    <Icon name="User" size={16} />
+                    Имя
+                  </label>
+                  <Input 
+                    placeholder="Ваше имя" 
+                    className="border-2 h-12 text-lg"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-sm font-medium flex items-center gap-2">
+                    <Icon name="Mail" size={16} />
+                    Email
+                  </label>
+                  <Input 
+                    type="email" 
+                    placeholder="your@email.com" 
+                    className="border-2 h-12 text-lg"
+                  />
+                </div>
+                <Button 
+                  type="submit" 
+                  className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90 text-white font-bold h-12 text-lg"
+                >
+                  <Icon name="Send" size={20} className="mr-2" />
+                  Подписаться
+                </Button>
+              </form>
+              
+              <div className="border-t pt-6">
+                <h4 className="font-bold mb-4 flex items-center gap-2">
+                  <Icon name="Gift" size={20} className="text-primary" />
+                  Что вы получите:
+                </h4>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <Icon name="Check" size={20} className="text-primary mt-0.5 flex-shrink-0" />
+                    <span>Еженедельные советы по дизайну и фотошопу</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Icon name="Check" size={20} className="text-primary mt-0.5 flex-shrink-0" />
+                    <span>Эксклюзивные скидки для подписчиков до 30%</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Icon name="Check" size={20} className="text-primary mt-0.5 flex-shrink-0" />
+                    <span>Бесплатные шаблоны и ресурсы для дизайна</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Icon name="Check" size={20} className="text-primary mt-0.5 flex-shrink-0" />
+                    <span>Первыми узнавайте о новых услугах</span>
+                  </li>
+                </ul>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      <section id="blog" className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto">
           <h3 className="text-4xl font-black mb-12 text-center">БЛОГ</h3>
           <div className="grid md:grid-cols-3 gap-8">
