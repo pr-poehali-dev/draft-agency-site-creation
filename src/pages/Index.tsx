@@ -210,7 +210,18 @@ const Index = () => {
 
       <section id="earnings" className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto">
-          <h3 className="text-4xl font-black mb-12 text-center">ЗАРАБОТОК</h3>
+          <h3 className="text-4xl font-black mb-12 text-center">ЗАРАБОТОК НА AVISO</h3>
+          <div className="text-center mb-8">
+            <a 
+              href="https://aviso.bz/?r=mnuua" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-lg font-semibold text-primary hover:text-primary/80 transition-colors underline"
+            >
+              <Icon name="ExternalLink" size={20} />
+              Перейти на AVISO
+            </a>
+          </div>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <Card className="border-2 border-primary/50 hover:border-primary transition-all hover:scale-105 duration-300">
               <CardHeader>
