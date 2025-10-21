@@ -302,23 +302,26 @@ const Index = () => {
       <section id="subscribe" className="py-20 px-4">
         <div className="container mx-auto max-w-3xl">
           <div className="text-center mb-12">
-            <h3 className="text-4xl font-black mb-4">БЕСПЛАТНАЯ ПОДПИСКА</h3>
+            <h3 className="text-4xl font-black mb-4">ПРЕМИУМ ПОДПИСКА</h3>
             <p className="text-xl text-muted-foreground">
-              Получайте эксклюзивные материалы абсолютно бесплатно
+              Получите доступ к эксклюзивному контенту и премиум материалам
             </p>
           </div>
           
-          <Card className="border-2 border-primary/30 shadow-xl">
+          <Card className="border-2 border-primary/30 shadow-xl bg-gradient-to-br from-primary/5 to-accent/5">
             <CardHeader className="text-center">
               <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                <Icon name="Mail" size={40} className="text-white" />
+                <Icon name="Crown" size={40} className="text-white" />
               </div>
               <CardTitle className="text-3xl flex items-center justify-center gap-3">
-                Бесплатная рассылка
-                <span className="bg-green-500 text-white text-sm px-3 py-1 rounded-full">FREE</span>
+                Premium подписка
+                <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-sm px-3 py-1 rounded-full">PRO</span>
               </CardTitle>
+              <div className="text-5xl font-black text-primary mt-4">
+                990₽<span className="text-xl text-muted-foreground">/месяц</span>
+              </div>
               <CardDescription className="text-base mt-2">
-                100% бесплатно. Никаких скрытых платежей. Отписаться можно в любой момент
+                Отмена автопродления в любой момент. Первые 7 дней бесплатно
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
@@ -346,34 +349,45 @@ const Index = () => {
                 </div>
                 <Button 
                   type="submit" 
-                  className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90 text-white font-bold h-12 text-lg"
+                  className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90 text-white font-bold h-14 text-lg shadow-xl"
                 >
-                  <Icon name="Send" size={20} className="mr-2" />
-                  Подписаться
+                  <Icon name="CreditCard" size={20} className="mr-2" />
+                  Оформить подписку - 990₽/мес
                 </Button>
+                <p className="text-xs text-center text-muted-foreground">
+                  Первые 7 дней бесплатно. Отмена в любой момент.
+                </p>
               </form>
               
               <div className="border-t pt-6">
                 <h4 className="font-bold mb-4 flex items-center gap-2">
-                  <Icon name="Gift" size={20} className="text-primary" />
-                  Что вы получите:
+                  <Icon name="Sparkles" size={20} className="text-primary" />
+                  Что включено в Premium:
                 </h4>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
                     <Icon name="Check" size={20} className="text-primary mt-0.5 flex-shrink-0" />
-                    <span>Еженедельные советы по дизайну и фотошопу</span>
+                    <span><strong>Ежедневные</strong> мастер-классы по дизайну и фотошопу</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Icon name="Check" size={20} className="text-primary mt-0.5 flex-shrink-0" />
-                    <span>Эксклюзивные скидки для подписчиков до 30%</span>
+                    <span>Доступ к библиотеке <strong>500+ премиум шаблонов</strong></span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Icon name="Check" size={20} className="text-primary mt-0.5 flex-shrink-0" />
-                    <span>Бесплатные шаблоны и ресурсы для дизайна</span>
+                    <span>Персональные консультации с экспертами</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Icon name="Check" size={20} className="text-primary mt-0.5 flex-shrink-0" />
-                    <span>Первыми узнавайте о новых услугах</span>
+                    <span>Скидка <strong>50%</strong> на все наши услуги</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Icon name="Check" size={20} className="text-primary mt-0.5 flex-shrink-0" />
+                    <span>Приоритетная поддержка 24/7</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Icon name="Check" size={20} className="text-primary mt-0.5 flex-shrink-0" />
+                    <span>Закрытое сообщество профессионалов</span>
                   </li>
                 </ul>
               </div>
