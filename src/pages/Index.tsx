@@ -228,7 +228,7 @@ const Index = () => {
                 <div className="w-16 h-16 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
                   <Icon name="Sparkles" size={32} className="text-primary" />
                 </div>
-                <CardTitle className="text-2xl">Создание дизайна</CardTitle>
+                <CardTitle className="text-2xl">Заработок на AVISO</CardTitle>
                 <CardDescription className="text-base mt-2">
                   Разработка логотипов, баннеров, иллюстраций для брендов
                 </CardDescription>
