@@ -33,7 +33,7 @@ const Index = () => {
     {
       name: 'Попов Михаил Максимович',
       role: 'Арт-директор',
-      image: 'https://cdn.poehali.dev/files/09435d09-eb50-4cf5-823d-bdb0d6525e37.jpg',
+      image: 'https://cdn.poehali.dev/files/4e51aad4-8cb8-4470-875a-ddb3614f8050.jpg',
     },
     {
       name: 'Агаев Наум',
