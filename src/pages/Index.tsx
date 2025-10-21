@@ -21,7 +21,7 @@ const Index = () => {
       image: 'https://cdn.poehali.dev/files/3586da98-8112-4452-8f6b-6f3d193bc24c.png',
     },
     {
-      name: 'Дмитрий Иванов',
+      name: 'Агаев Наум',
       role: 'Дизайнер',
       image: 'https://cdn.poehali.dev/files/3586da98-8112-4452-8f6b-6f3d193bc24c.png',
     },
