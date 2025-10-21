@@ -33,7 +33,7 @@ const Index = () => {
     {
       name: 'Попов Михаил Максимович',
       role: 'Арт-директор',
-      image: 'https://cdn.poehali.dev/files/acd057f0-5fb0-4a51-a22d-50ca7689368d.jpg',
+      image: 'https://cdn.poehali.dev/files/3586da98-8112-4452-8f6b-6f3d193bc24c.png',
     },
     {
       name: 'Агаев Наум',
@@ -68,9 +68,9 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <img 
-                src="https://cdn.poehali.dev/files/a03f2f05-e773-4f70-8dcd-c27b225df29b.jpg" 
+                src="https://cdn.poehali.dev/files/3586da98-8112-4452-8f6b-6f3d193bc24c.png" 
                 alt="Logo" 
-                className="w-12 h-12 rounded-full object-cover"
+                className="w-12 h-12"
               />
               <h1 className="text-2xl font-black tracking-tight">DIGITAL ART AGENCY</h1>
             </div>
