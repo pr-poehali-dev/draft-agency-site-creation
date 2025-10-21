@@ -38,7 +38,7 @@ const Index = () => {
     {
       name: 'Агаев Наум',
       role: 'Дизайнер',
-      image: 'https://cdn.poehali.dev/files/3586da98-8112-4452-8f6b-6f3d193bc24c.png',
+      image: 'https://cdn.poehali.dev/files/7da73c75-c1d3-4e73-8b49-9b63943c2438.jpg',
     },
   ];
 
