@@ -267,7 +267,7 @@ const Index = () => {
             <div className="space-y-2">
               <Icon name="Mail" size={24} className="mx-auto text-primary" />
               <p className="font-bold">Email</p>
-              <p className="text-sm text-muted-foreground">info@digitalart.agency</p>
+              <p className="text-sm text-muted-foreground">misa32563@gmail.com</p>
             </div>
             <div className="space-y-2">
               <Icon name="Phone" size={24} className="mx-auto text-secondary" />
@@ -277,7 +277,7 @@ const Index = () => {
             <div className="space-y-2">
               <Icon name="MapPin" size={24} className="mx-auto text-accent" />
               <p className="font-bold">Адрес</p>
-              <p className="text-sm text-muted-foreground">Москва, Россия</p>
+              <p className="text-sm text-muted-foreground">Братск, Россия</p>
             </div>
           </div>
         </div>
