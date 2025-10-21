@@ -234,8 +234,16 @@ const Index = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="text-3xl font-black text-primary mb-2">от 5,000₽</div>
-                <p className="text-sm text-muted-foreground">за проект</p>
+                <a 
+                  href="https://aviso.bz/?r=mnuua" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block"
+                >
+                  <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold">
+                    Перейти на AVISO
+                  </Button>
+                </a>
               </CardContent>
             </Card>
 
