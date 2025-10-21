@@ -272,7 +272,7 @@ const Index = () => {
             <div className="space-y-2">
               <Icon name="Phone" size={24} className="mx-auto text-secondary" />
               <p className="font-bold">Телефон</p>
-              <p className="text-sm text-muted-foreground">+7 (999) 123-45-67</p>
+              <p className="text-sm text-muted-foreground">Не показан</p>
             </div>
             <div className="space-y-2">
               <Icon name="MapPin" size={24} className="mx-auto text-accent" />
