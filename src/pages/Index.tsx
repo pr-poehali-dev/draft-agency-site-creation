@@ -308,6 +308,38 @@ const Index = () => {
               </Card>
             ))}
           </div>
+          <div className="mt-12 max-w-2xl mx-auto">
+            <Card className="border-2 hover:border-primary transition-all duration-300">
+              <CardHeader>
+                <div className="flex items-center gap-4">
+                  <img 
+                    src="https://yt3.googleusercontent.com/ytc/AIdro_nQlJ6zGG7hx4uqL4vP6gLBq6zUxwqE8WMi0-CQwqoOlw=s176-c-k-c0x00ffffff-no-rj" 
+                    alt="YouTube Channel" 
+                    className="w-20 h-20 rounded-full"
+                  />
+                  <div>
+                    <CardTitle className="text-2xl">Наш YouTube канал</CardTitle>
+                    <CardDescription className="text-base mt-2">
+                      АГ.ДФ - МОЯ ЖИЗНЬ
+                    </CardDescription>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <a 
+                  href="https://www.youtube.com/@АГ.ДФ-МОЯ-ЖИЗНЬ" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block w-full"
+                >
+                  <Button className="w-full bg-red-600 hover:bg-red-700 text-white font-bold">
+                    <Icon name="Youtube" size={20} className="mr-2" />
+                    Подписаться на канал
+                  </Button>
+                </a>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 
