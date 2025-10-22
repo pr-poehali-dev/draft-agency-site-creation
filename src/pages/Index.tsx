@@ -15,9 +15,7 @@ const Index = () => {
   const [showBackButton, setShowBackButton] = useState(false);
 
   useEffect(() => {
-    if (window.history.length > 1) {
-      setShowBackButton(true);
-    }
+    setShowBackButton(true);
   }, []);
 
   const scrollToSection = (sectionId: string) => {
