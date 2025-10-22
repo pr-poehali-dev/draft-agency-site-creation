@@ -1,14 +1,29 @@
+import { Button } from '@/components/ui/button';
+import Icon from '@/components/ui/icon';
+
 interface NavigationProps {
   activeSection: string;
   onSectionClick: (section: string) => void;
+  showBackButton?: boolean;
+  onBackClick?: () => void;
 }
 
-const Navigation = ({ activeSection, onSectionClick }: NavigationProps) => {
+const Navigation = ({ activeSection, onSectionClick, showBackButton, onBackClick }: NavigationProps) => {
   return (
     <nav className="fixed top-0 w-full bg-card/95 backdrop-blur-sm z-50 border-b border-border">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
+            {showBackButton && (
+              <Button 
+                onClick={onBackClick}
+                variant="ghost"
+                size="icon"
+                className="hover:bg-primary/10"
+              >
+                <Icon name="ArrowLeft" size={24} />
+              </Button>
+            )}
             <img 
               src="https://cdn.poehali.dev/files/3586da98-8112-4452-8f6b-6f3d193bc24c.png" 
               alt="Logo" 

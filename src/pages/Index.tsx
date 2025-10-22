@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import HalloweenDecor from '@/components/HalloweenDecor';
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
@@ -12,11 +12,22 @@ import Footer from '@/components/Footer';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
+  const [showBackButton, setShowBackButton] = useState(false);
+
+  useEffect(() => {
+    if (window.history.length > 1) {
+      setShowBackButton(true);
+    }
+  }, []);
 
   const scrollToSection = (sectionId: string) => {
     setActiveSection(sectionId);
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleBack = () => {
+    window.history.back();
   };
 
   const teamMembers = [
@@ -56,6 +67,8 @@ const Index = () => {
       <Navigation 
         activeSection={activeSection}
         onSectionClick={scrollToSection}
+        showBackButton={showBackButton}
+        onBackClick={handleBack}
       />
       <HeroSection 
         onContactClick={() => scrollToSection('contact')}
