@@ -29,6 +29,10 @@ const Index = () => {
     element?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const handleBack = () => {
+    window.history.back();
+  };
+
   const teamMembers = [
     {
       name: 'Попов Михаил Максимович',
@@ -67,6 +71,14 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
+              <Button 
+                onClick={handleBack}
+                variant="ghost"
+                size="icon"
+                className="hover:bg-primary/10"
+              >
+                <Icon name="ArrowLeft" size={24} />
+              </Button>
               <img 
                 src="https://cdn.poehali.dev/files/3586da98-8112-4452-8f6b-6f3d193bc24c.png" 
                 alt="Logo" 
