@@ -3,6 +3,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import Icon from '@/components/ui/icon';
 
 const EarningsSection = () => {
+  const handleAvisoClick = () => {
+    sessionStorage.setItem('visitedAviso', 'true');
+    window.open('https://aviso.bz/?r=mnuua', '_blank');
+  };
+
   return (
     <section id="earnings" className="py-20 px-4 bg-muted/30">
       <div className="container mx-auto">
@@ -19,14 +24,12 @@ const EarningsSection = () => {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <a 
-                href="https://aviso.bz/?r=mnuua" 
-                className="inline-block"
+              <Button 
+                onClick={handleAvisoClick}
+                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold"
               >
-                <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold">
-                  Перейти на AVISO
-                </Button>
-              </a>
+                Перейти на AVISO
+              </Button>
             </CardContent>
           </Card>
           <Card className="border-2 hover:border-secondary transition-all hover:scale-105 duration-300">

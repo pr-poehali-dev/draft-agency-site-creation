@@ -15,9 +15,19 @@ const Index = () => {
   const [showBackButton, setShowBackButton] = useState(false);
 
   useEffect(() => {
-    if (window.history.length > 1) {
-      setShowBackButton(true);
-    }
+    const checkBackButton = () => {
+      const visitedAviso = sessionStorage.getItem('visitedAviso');
+      if (visitedAviso === 'true' || window.history.length > 1) {
+        setShowBackButton(true);
+      }
+    };
+
+    checkBackButton();
+    window.addEventListener('focus', checkBackButton);
+
+    return () => {
+      window.removeEventListener('focus', checkBackButton);
+    };
   }, []);
 
   const scrollToSection = (sectionId: string) => {
