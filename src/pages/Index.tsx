@@ -72,7 +72,7 @@ const Index = () => {
                 alt="Logo" 
                 className="w-12 h-12"
               />
-              <h1 className="text-2xl font-black tracking-tight">DIGITAL ART AGENCY</h1>
+              <h1 className="text-2xl font-black tracking-tight">АГ.ДФ БИЗНЕС</h1>
             </div>
             <div className="hidden md:flex gap-6">
               {['home', 'about', 'team', 'earnings', 'subscribe', 'blog', 'contact'].map((section) => (
@@ -394,7 +394,7 @@ const Index = () => {
                 alt="Logo" 
                 className="w-10 h-10"
               />
-              <span className="font-bold">DIGITAL ART AGENCY</span>
+              <span className="font-bold">АГ.ДФ БИЗНЕС</span>
             </div>
             <div className="flex gap-6">
               <a href="#" className="hover:text-primary transition-colors">
@@ -408,7 +408,7 @@ const Index = () => {
               </a>
             </div>
             <p className="text-sm text-muted-foreground">
-              © 2025 Digital Art Agency. Все права защищены.
+              © 2025 АГ.ДФ БИЗНЕС. Все права защищены.
             </p>
           </div>
         </div>
