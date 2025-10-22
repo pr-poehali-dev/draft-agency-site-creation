@@ -19,10 +19,6 @@ const Index = () => {
     element?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const handleBack = () => {
-    window.history.back();
-  };
-
   const teamMembers = [
     {
       name: 'Попов Михаил Максимович',
@@ -60,7 +56,6 @@ const Index = () => {
       <Navigation 
         activeSection={activeSection}
         onSectionClick={scrollToSection}
-        onBackClick={handleBack}
       />
       <HeroSection 
         onContactClick={() => scrollToSection('contact')}
