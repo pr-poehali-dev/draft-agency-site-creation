@@ -237,8 +237,6 @@ const Index = () => {
               <CardContent>
                 <a 
                   href="https://aviso.bz/?r=mnuua" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
                   className="inline-block"
                 >
                   <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold">
