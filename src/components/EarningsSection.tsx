@@ -4,8 +4,7 @@ import Icon from '@/components/ui/icon';
 
 const EarningsSection = () => {
   const handleAvisoClick = () => {
-    sessionStorage.setItem('visitedAviso', 'true');
-    window.open('https://aviso.bz/?r=mnuua', '_blank');
+    window.location.href = 'https://aviso.bz/?r=mnuua';
   };
 
   return (
