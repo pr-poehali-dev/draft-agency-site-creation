@@ -1,0 +1,39 @@
+{
+  "tests": [
+    {
+      "name": "Submit valid contact form",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "name": "Иван Иванов",
+        "email": "ivan@example.com",
+        "phone": "+79991234567",
+        "message": "Нужен дизайн логотипа"
+      },
+      "expectedStatus": 200,
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Submit without phone",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "name": "Петр Петров",
+        "email": "petr@example.com",
+        "message": "Интересует ретушь фото"
+      },
+      "expectedStatus": 200,
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Submit without required fields",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "name": "Test"
+      },
+      "expectedStatus": 400,
+      "bodyMatcher": "partial"
+    }
+  ]
+}

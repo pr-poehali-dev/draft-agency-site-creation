@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
 import Icon from '@/components/ui/icon';
+import ContactForm from '@/components/ContactForm';
 
 const HalloweenDecor = () => {
   return (
@@ -355,30 +354,7 @@ const Index = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium">Имя</label>
-                    <Input placeholder="Ваше имя" className="h-12" />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium">Email</label>
-                    <Input type="email" placeholder="your@email.com" className="h-12" />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium">Сообщение</label>
-                    <Textarea 
-                      placeholder="Расскажите о вашем проекте..." 
-                      className="min-h-32 resize-none"
-                    />
-                  </div>
-                  <Button 
-                    type="submit" 
-                    size="lg"
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold"
-                  >
-                    Отправить
-                  </Button>
-                </form>
+                <ContactForm />
               </CardContent>
             </Card>
           </div>
