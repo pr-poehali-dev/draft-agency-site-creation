@@ -1,4 +1,5 @@
 {
+  "verify-admin": "https://functions.poehali.dev/900e76c5-ea2c-4313-87b5-6997aa02357f",
   "get-contacts": "https://functions.poehali.dev/33c60dc6-2ec9-4ddc-9259-f6eaaa3a3ee2",
   "contact-form": "https://functions.poehali.dev/548e8026-47b9-4690-858d-1a024de7d04d",
   "visit-counter": "https://functions.poehali.dev/67f48dc3-e76f-4c00-a1d5-a66414c044be"

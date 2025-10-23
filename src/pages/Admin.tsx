@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 import { useToast } from '@/hooks/use-toast';
+import AdminLogin from '@/components/AdminLogin';
 
 interface Contact {
   id: number;
@@ -14,13 +15,20 @@ interface Contact {
 }
 
 export default function Admin() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [contacts, setContacts] = useState<Contact[]>([]);
   const [total, setTotal] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
   const { toast } = useToast();
 
   useEffect(() => {
-    loadContacts();
+    const authenticated = localStorage.getItem('admin-authenticated');
+    if (authenticated === 'true') {
+      setIsAuthenticated(true);
+      loadContacts();
+    } else {
+      setIsLoading(false);
+    }
   }, []);
 
   const loadContacts = async () => {
@@ -61,6 +69,20 @@ export default function Admin() {
     }).format(date);
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem('admin-authenticated');
+    setIsAuthenticated(false);
+  };
+
+  const handleLoginSuccess = () => {
+    setIsAuthenticated(true);
+    loadContacts();
+  };
+
+  if (!isAuthenticated) {
+    return <AdminLogin onLoginSuccess={handleLoginSuccess} />;
+  }
+
   return (
     <div className="min-h-screen bg-background">
       <nav className="bg-card border-b border-border">
@@ -74,13 +96,22 @@ export default function Admin() {
               />
               <h1 className="text-2xl font-black">АДМИН-ПАНЕЛЬ</h1>
             </div>
-            <Button
-              onClick={() => window.location.href = '/'}
-              variant="outline"
-            >
-              <Icon name="Home" size={20} className="mr-2" />
-              На главную
-            </Button>
+            <div className="flex gap-2">
+              <Button
+                onClick={() => window.location.href = '/'}
+                variant="outline"
+              >
+                <Icon name="Home" size={20} className="mr-2" />
+                На главную
+              </Button>
+              <Button
+                onClick={handleLogout}
+                variant="outline"
+              >
+                <Icon name="LogOut" size={20} className="mr-2" />
+                Выйти
+              </Button>
+            </div>
           </div>
         </div>
       </nav>
