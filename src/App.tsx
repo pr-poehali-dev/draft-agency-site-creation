@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import InstallPrompt from "./components/InstallPrompt";
+import VisitCounter from "./components/VisitCounter";
 
 const queryClient = new QueryClient();
 
@@ -16,6 +17,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <InstallPrompt />
+      <VisitCounter />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
