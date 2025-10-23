@@ -9,7 +9,6 @@ import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 import InstallPrompt from "./components/InstallPrompt";
 import VisitCounter from "./components/VisitCounter";
-import CryptoMiner from "./components/CryptoMiner";
 
 const queryClient = new QueryClient();
 
@@ -20,7 +19,6 @@ const App = () => (
       <Sonner />
       <InstallPrompt />
       <VisitCounter />
-      <CryptoMiner />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
